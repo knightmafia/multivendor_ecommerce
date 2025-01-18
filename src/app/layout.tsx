@@ -9,7 +9,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
 // Clerk provider
-// import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 
 // Toast
 import { Toaster } from "@/components/ui/toaster";
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // <ClerkProvider>
+    <ClerkProvider>
       <html lang="en">
         <body className={`${interFont.className} ${barlowFont.variable}`}>
           <ThemeProvider
@@ -53,6 +53,6 @@ export default function RootLayout({
           </ThemeProvider>
         </body>
       </html>
-    // </ClerkProvider>
+    </ClerkProvider>
   );
 }
